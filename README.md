@@ -1,33 +1,92 @@
 # API Documentation
 
-### Register
+## Register
 <pre>POST /register</pre>
 
-### Login
+- Body Request
+  ```
+  {
+      "name": "Charlie Davis",
+      "email": "charlie.davis@example.com",
+      "pass": "password"
+  }
+  ```
+
+- Response
+  ```
+  {
+      "status": "success",
+      "message": "User created successfully"
+  }
+  ```
+
+## Login
 <pre>POST /login</pre>
 
-### Profile
+- Body Request
+  ```
+  {
+      "email": "charlie.davis@example.com",
+      "pass": "password"
+  }
+  ```
+
+- Response
+  ```
+  {
+      "status": "success",
+      "message": "login successful",
+      "data": {
+          "token": "<tokenValue>"
+      }
+  }
+  ```
+
+## Profile
 <pre>GET /profile</pre>
 
-### Edit Profile
+- Headers Request
+  ```
+  Key: Authorization
+  Value: Bearer <tokenValue>
+  ```
+
+- Response
+  ```
+  {
+      "status": "success",
+      "message": "read successful",
+      "data": {
+          "user_id": 5,
+          "user_name": "Charlie Davis",
+          "user_email": "charlie.davis@example.com",
+          "user_age": null,
+          "user_height": null,
+          "user_weight": null,
+          "sugar_limit": null
+      }
+  }
+  ```
+
+## Edit Profile
 <pre>PUT /profile/edit</pre>
 
-### History
+## History
 <pre>GET /history</pre>
 
-### History Detail
+## History Detail
 <pre>GET /history/{scanId}</pre>
 
-### Grade
+## Grade
 <pre>GET /grade/{gradeId}</pre>
 
-### Track
+## Track
 <pre>GET /track</pre>
 
-### Scan
+## Scan
 <pre>Not Available Yet</pre>
 
-### Consume
+## Consume
 <pre>PUT /consume</pre>
 
 
