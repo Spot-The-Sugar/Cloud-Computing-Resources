@@ -1,4 +1,4 @@
-# API Documentation
+1# API Documentation
 
 ## Register
 <pre>POST /register</pre>
@@ -210,9 +210,46 @@
 ## Consume
 <pre>PUT /consume</pre>
 
-Masih error bro, sabar ya
+- Headers Request
+  ```
+  Key: Authorization
+  Value: Bearer <tokenValue>
+  ```
+
+- Body Request
+  ```
+  {
+      "consumeSugar": 15
+  }
+  ```
+
+- Response
+  ```
+  {
+      "status": "success",
+      "message": "update successful"
+  }
+  ```
 
 ## Track
 <pre>GET /track</pre>
 
-Masih error bro, sabar ya
+- Headers Request
+  ```
+  Key: Authorization
+  Value: Bearer <tokenValue>
+  ```
+
+- Response
+  ```
+  {
+      "status": "success",
+      "message": "read successful",
+      "data": {
+          "user_name": "Charlie Davis",
+          "sugar_limit": 55,
+          "consume_sugar": 35,
+          "consume_date": "2024-06-11T00:00:00.000Z"
+      }
+  }
+  ```
