@@ -6,9 +6,10 @@
 - Body Request
   ```
   {
-      "name": "Charlie Davis",
-      "email": "charlie.davis@example.com",
-      "pass": "password"
+      "name": "Charlie",
+      "email": "charlie@example.com",
+      "pass": "password",
+      "age": 20
   }
   ```
 
@@ -36,9 +37,22 @@
   {
       "status": "success",
       "message": "login successful",
-      "data": {
-          "token": "<tokenValue>"
-      }
+      "data": [
+          {
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImlhdCI6MTcxODcyMjg0NH0.LFv5Of9mgWmWUkuo0yWxARsH1DGxsOQRKwC7kacm0oo"
+          },
+          {
+              "userData": {
+                  "user_id": 5,
+                  "user_name": "Charlie Davis",
+                  "user_email": "charlie.davis@example.com",
+                  "user_age": 40,
+                  "user_height": 170,
+                  "user_weight": 68,
+                  "sugar_limit": 55
+              }
+          }
+      ]
   }
   ```
 
@@ -225,19 +239,72 @@
   {
       "status": "success",
       "message": "image predicted",
-      "data": {
-          "product_id": 11,
-          "product_name": "Frisian Flag",
-          "product_category": "Minuman",
-          "product_type": "Susu UHT Strawberry Low Fat",
-          "product_grade": "C",
-          "serving_size": 225,
-          "serving_pack": 1,
-          "serving_sugar": 21,
-          "total_sugar": 21,
-          "image_url": "https://storage.googleapis.com/sts-dummy-image/dummy-image/frisian-flag-susu-uht-strawberry-low-fat.jpg",
-          "product_barcode": "8992753033713"
-      }
+      "data": [
+          {
+              "productResult": {
+                  "product_id": 11,
+                  "product_name": "Frisian Flag",
+                  "product_category": "Minuman",
+                  "product_type": "Susu UHT Strawberry Low Fat",
+                  "product_grade": "C",
+                  "serving_size": 225,
+                  "serving_pack": 1,
+                  "serving_sugar": 21,
+                  "total_sugar": 21,
+                  "image_url": "https://storage.googleapis.com/sts-dummy-image/dummy-image/frisian-flag-susu-uht-strawberry-low-fat.jpg",
+                  "product_barcode": "8992753033713"
+              }
+          },
+          {
+              "recResults": [
+                  {
+                      "rec_id": 3,
+                      "product_barcode": "8992753033713",
+                      "rec_product": "8992753033713",
+                      "product_id": 11,
+                      "product_name": "Frisian Flag",
+                      "product_category": "Minuman",
+                      "product_type": "Susu UHT Strawberry Low Fat",
+                      "product_grade": "C",
+                      "serving_size": 225,
+                      "serving_pack": 1,
+                      "serving_sugar": 21,
+                      "total_sugar": 21,
+                      "image_url": "https://storage.googleapis.com/sts-dummy-image/dummy-image/frisian-flag-susu-uht-strawberry-low-fat.jpg"
+                  },
+                  {
+                      "rec_id": 2,
+                      "product_barcode": "8992753033713",
+                      "rec_product": "8992753033713",
+                      "product_id": 11,
+                      "product_name": "Frisian Flag",
+                      "product_category": "Minuman",
+                      "product_type": "Susu UHT Strawberry Low Fat",
+                      "product_grade": "C",
+                      "serving_size": 225,
+                      "serving_pack": 1,
+                      "serving_sugar": 21,
+                      "total_sugar": 21,
+                      "image_url": "https://storage.googleapis.com/sts-dummy-image/dummy-image/frisian-flag-susu-uht-strawberry-low-fat.jpg"
+                  },
+                  {
+                      "rec_id": 1,
+                      "product_barcode": "8992753033713",
+                      "rec_product": "8992753033713",
+                      "product_id": 11,
+                      "product_name": "Frisian Flag",
+                      "product_category": "Minuman",
+                      "product_type": "Susu UHT Strawberry Low Fat",
+                      "product_grade": "C",
+                      "serving_size": 225,
+                      "serving_pack": 1,
+                      "serving_sugar": 21,
+                      "total_sugar": 21,
+                      "image_url": "https://storage.googleapis.com/sts-dummy-image/dummy-image/frisian-flag-susu-uht-strawberry-low-fat.jpg"
+                  }
+              ]
+          }
+      ]
   }
   ```
 
