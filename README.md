@@ -1,4 +1,4 @@
-1# API Documentation
+# API Documentation
 
 ## Register
 <pre>POST /register</pre>
@@ -205,7 +205,41 @@
   ```
 
 ## Scan
-<pre>Not Available Yet</pre>
+<pre>POST /scan</pre>
+
+- Headers Request
+  ```
+  Key: Authorization
+  Value: Bearer <tokenValue>
+  ```
+
+- Body Request
+  ```
+  {
+      "predictedClass": "8992753033713"
+  }
+  ```
+
+- Response
+  ```
+  {
+      "status": "success",
+      "message": "image predicted",
+      "data": {
+          "product_id": 11,
+          "product_name": "Frisian Flag",
+          "product_category": "Minuman",
+          "product_type": "Susu UHT Strawberry Low Fat",
+          "product_grade": "C",
+          "serving_size": 225,
+          "serving_pack": 1,
+          "serving_sugar": 21,
+          "total_sugar": 21,
+          "image_url": "https://storage.googleapis.com/sts-dummy-image/dummy-image/frisian-flag-susu-uht-strawberry-low-fat.jpg",
+          "product_barcode": "8992753033713"
+      }
+  }
+  ```
 
 ## Consume
 <pre>PUT /consume</pre>
